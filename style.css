@@ -244,7 +244,8 @@ main {
 .aside-section {
     width: fit-content;
     margin: 0px auto;
-    height: fit-content;
+    height: 300px;
+    overflow: scroll;
 }
 
 .other-aside1, .other-aside2 {
@@ -278,6 +279,7 @@ main {
     border: 2px solid white;
     padding: 10px;
     max-width: 650px;
+    width: 100%;
     margin: 0px auto;
     overflow: auto;
     border-radius: 10px;
@@ -326,17 +328,22 @@ main {
     font-family: var(--main-font);
 }
 
-.orion-img {
+.img-orion {
+    margin: 10px 0px 10px;
     text-align: center;
-    width: fit-content;
-    margin-top: 20px;
 }
 
-.orion-img .img-strona-glowna {
-    width: 100%;
-    max-width: 400px;
-    border: 2px solid white;
-    border-radius: 15px;
+.img-orion figcaption {
+    color: white;
+    font-family: var(--main-font);
+    text-align: center;
+    font-size: 10px;
+}
+
+.img-strona-glowna {
+    width: 170px;
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 .start-quiz {
@@ -382,6 +389,7 @@ main {
     background-color: var(--answear-background-color);
     margin: 10px 0px;
     border-radius: 10px;
+    font-size: 15px;
     padding: 10px;
     color: black;
     font-family: var(--header-font);
@@ -446,6 +454,30 @@ main {
     color: white;
 }
 
+.img-div {
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.img-div img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.nav-sites-main h3 {
+    margin-top: 20px;
+}
+
+.iframe-div {
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.iframe-div iframe {
+    width: 200px;
+    height: 350px;
+}
+
 .red {
     color: var(--span-red-color);
 }
@@ -458,7 +490,7 @@ main {
     flex-direction: column;
     width: 80%;
     max-width: 320px;
-    margin: 10px auto 25px;
+    margin: 20px auto 25px;
     border-radius: 10px;
     box-sizing: border-box;
     border: 2px solid #ffffff;
@@ -541,14 +573,36 @@ main {
         height: 421.6px;
         width: 100%;
     }
+    .img-strona-glowna {
+        width: 200px;
+    }
     .obj-img-div img {
         width: 250px;
     }
     .obj-img-div video {
         width: 250px;
     }
+    .iframe-div iframe {
+        width: 250px;
+    }
 }
 
+@media only screen and (min-width: 500px) {
+    .iframe-div iframe {
+        width: 360px;
+        height: 350px;
+    }
+    .img-strona-glowna {
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .img-orion {
+        float: right;
+        width: fit-content
+    }
+}
 
 @media only screen and (min-width: 650px) {
     #logo-container h1 {
@@ -607,7 +661,19 @@ main {
     .obj-img-div video {
         width: 350px;
     }
-
+    .obj-img-div img {
+        width: 400px;
+    }
+    .img-div {
+        margin: 20px 0px;
+    }
+    .img-div img {
+        width: 300px;
+    }
+    .iframe-div iframe {
+        width: 500px;
+        height: 500px;
+    }
 
     .footer-section {
         display: flex;
@@ -758,6 +824,10 @@ main {
     .obj-img-div video {
         width: 450px;
     }
+    .iframe-div iframe {
+        width: 500px;
+        height: 500px;
+    }
 
     footer {
         width: 90%;
@@ -812,13 +882,27 @@ main {
         margin-right: 0px;
         margin-left: 370px;
     }
-    .orion-img  {
+    /* .orion-img  {
         position: absolute;
         top: 145px;
         left: 700px;
+        float: right;
+        width: 300px;
+    } */
+    .img-orion {
+        float: right;
+        margin: 20px 20px 10px;
     }
-    .orion-img .img-strona-glowna {
-        width: 700px;
+    .img-orion figcaption {
+        color: white;
+        font-family: var(--main-font);
+        text-align: center;
+        font-size: 10px;
+    }
+    .img-strona-glowna {
+        width: 400px;
+        border: 1px solid white;
+        border-radius: 10px;
     }
     .answear-pair {
         display: flex;
@@ -830,11 +914,27 @@ main {
         display: flex;
         align-items: center;
         width: 300px;
-        height: 100px;
-        padding: 0px 20px;
+        height: fit-content;
+        min-height: 100px;
+        padding: 10px 20px;
     }
     .obj-img-div video {
         width: 550px;
+    }
+    .start-quiz div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+        height: 240px;
+        margin: 0px auto 10px;
+    }
+    .next-quiz div {
+        width: 500px;
+    }
+    .iframe-div iframe {
+        width: 600px;
+        height: 600px;
     }
 
     footer {
@@ -848,19 +948,6 @@ main {
         width: auto;
         max-width: 1060px;
         margin: 10px 0px 30px 370px;
-    }
-
-    .start-quiz div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 500px;
-        height: 240px;
-        margin: auto;
-    }
-
-    .next-quiz div {
-        width: 500px;
     }
 }
 
